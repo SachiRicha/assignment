@@ -1,0 +1,413 @@
+/* set up some gobal styles  that the entire page, and really, across all pages, will be true*/
+body {
+    font-size: 16px;
+    color: #fff;
+    background-color: #61122f;
+    font-family: 'Oxygen', sans-serif;
+}
+
+/** HEADER **/
+#header-nav {
+    background-color: #f6b319;
+    /* border was little round before so we use border radius 0 */
+    border-radius: 0;
+    border: 0;
+}
+
+/** LOGO **/
+#logo-img {
+    background: url("../images/download.png") no-repeat ;
+    width: 150px;
+    height: 150px;
+}
+
+/* STYLE THE RESTURENT NAME */
+.navbar-brand h1 {  /*resturent name*/
+    font-family: 'Lora', serif;
+    color: rgba(39, 4, 122, 0.842);
+    font-size: 1.5em;
+    /* we'll all stay uppercase the entire time.   */
+    text-transform: uppercase;
+    font-weight: bold;
+    /* put some shadow on text */
+    text-shadow: 1px 1px 1px #222;
+    margin-top: 5px;
+    margin-bottom: 0;
+    /* decrease the line height just a little bit to kind of tighten up the whole thing. */
+    line-height: .75;
+}
+
+/* we have underline under the brand name so for remove that we will use text decoration */
+
+/* we want them not to have any underline type of link decoration. We just want it to be clickable but not look like a regular link.  */
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+    text-decoration: none;
+}
+
+.navbar-brand p {
+    color: #000;
+    text-transform: uppercase;
+    font-size: .7em;
+    margin-top: 15px;
+  
+}
+
+.navbar-brand p img {
+    height: 50px;
+    width: 50px;
+}
+.navbar-brand p span {
+    vertical-align: middle;
+}
+
+#nav-list {
+    margin-top: 5px;
+}
+
+#nav-list a {
+    color: #951c49;
+    text-align: center;
+}
+
+/* to make menu item clickable and after point its background color will change */
+#nav-list a:hover {
+    background-color: #e7e7e7;
+}
+
+#nav-list a span {
+    font-size: 1.0em;
+}
+
+#phone {
+    margin-top: 5px;
+}
+
+#phone a {
+    text-align: right;
+    padding-bottom: 0 ;
+}
+
+#phone div { /*we deliver*/
+    font-size: small;
+    color: rgba(39, 4, 122, 0.842);
+    text-align: right;
+    padding-right: 15px;
+}
+
+/*  going to change the color of the borders around the button.  */
+.navbar-header button.navbar-toggle, navbar-header .iconbar {
+    border: 1px solid #61122f;
+}
+
+.navbar-header button.navbar-toggle {
+    clear: both;
+    /* we need small font for mobile browser so we need to do is squeeze both of those things together and make it much tighter and much smaller font and make this whole yellow section much smaller.  */
+    margin-top: -30px;
+}
+/**END HEADER**/
+
+/* FOOTER */
+.panel-footer {
+    margin-top: 30px;
+    padding-top: 35px;
+    padding-bottom: 30px; 
+    background-color: #222;
+    border-top: 0;
+}
+.panel-footer div.row {
+    margin-bottom: 35px;
+}
+#hours, #address {
+    line-height: 2;
+}
+#hours > span, #address > span {
+    font-size: 1.3em;
+}
+#address p {
+    color: #557c3e;
+    font-size: .8em;
+    line-height: 1.8;
+}
+#testimonials {
+    font-style: italic;
+}
+#testimonials p:nth-child {
+margin-top: 25px;
+}
+/* END FOOTER */
+
+/* we want to make the logo image a little bit smaller, and also kind of save a little bit of bandwidth as well. so after 1200px breakpoint the meny item couldn't comes down  */
+
+/* HOME PAGE */
+.container .jumbotron {
+    box-shadow: 0 0 50px #3F0C1F;
+    border: 2px solid #3F0C1F;
+}
+
+
+#menu-tile, #specials-tile, #map-tile {
+    height: 250px;
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    border: 2px solid #3F0C1F;
+    overflow: hidden;
+}
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+    box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-tile {
+    background: url('../images/new food.webp') no-repeat;
+    background-position: center;
+}
+
+#specials-tile {
+    background: url('../images/new special.jpg') no-repeat;
+    background-position: center;
+}
+#map-tile {
+    background-position: center;
+}
+
+#menu-tile span, #specials-tile span, #map-tile span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    background-color: #000;
+    color: #fff;
+    opacity: .8; 
+}
+/* END HOME PAGE */
+
+/* Menu-category Page */
+
+
+.category-tile {
+    position: relative; 
+    border: 2px solid #3f0c1f;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 15px; 
+}
+
+.category-tile span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    background-color: #000;
+    color: #fff;
+    opacity: .8; 
+}
+
+.category-tile:hover {
+    box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-categories-title + div {
+    margin-bottom: 50px;
+}
+
+/* SINGLE CATEGORY PAGE */
+.menu-item-tile {
+    margin-bottom: 25px;
+}
+
+/* This hr here, the item tile hr, should only show up when we're squeezing the browser past, I believe the small, when it gets to be extra small. */
+.menu-item-tile hr {
+    width: 80%;
+}
+
+.menu-item-tile .menu-item-price {
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: -15px;
+    margin-bottom: -15px; 
+}
+.menu-item-tile .menu-item-price span {
+    font-size: .6em;
+}
+
+.menu-item-photo {
+    position: relative;
+    border: 2px solid #3f0c1f;
+    overflow: hidden;
+    padding: 0; 
+    margin-right: -15px;
+    margin-left: auto;
+    margin-bottom: 20px;
+    max-width: 250px; 
+}
+
+.menu-item-photo div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70px;
+    background-color: #f6b319;
+    text-align: center;
+    opacity: .8;
+}
+
+.menu-item-description {
+    padding-right: 30px;
+}
+
+h3.menu-item-title {
+    margin: 0 0 10px;
+} 
+
+.menu-item-details {
+    font-size: .9em;
+    font-style: italic;
+}
+/*****Large devices only*****/
+@media (min-width: 1200px) {
+    .container .jumbotron {
+        background: url("../images/jumbotron_1200.jpg") no-repeat;
+        height: 675px;
+    }
+}
+
+/*****Medium devices only*****/
+@media (min-width:992px) and (max-width: 1199px) {
+  /* Header */
+  #logo-img {
+     background: url("../images/download 1.png") no-repeat ;
+    }
+  /* End here */
+  .navbar-brand h1 {  /*resturent name*/
+     font-size: 1.0em;
+  }
+  /* Home page */
+   .container .jumbotron {
+     background: url("../images/jumbotron_992.jpg") no-repeat;
+     height: 558px;
+    }
+  /* END HOME PAGE */
+}
+
+/*****Small devices only*****/
+@media (min-width: 768px) and (max-width: 991px) {
+    .container .jumbotron {
+        background: url("../images/jumbotron_768 (1).jpg") no-repeat; 
+        height: 440px;
+    }
+}
+
+/*****Extra small devices only*****/
+
+@media (max-width: 767px) {
+   .navbar-brand {
+      padding-top: 10px;
+      height : 80px;
+   }
+   .navbar-brand h1 { /*resturent name*/
+      padding-top: 10px;
+      font-size: 4vw;
+   }
+   .navbar-brand p { /*bangtan certified*/
+      font-size: .6em;
+      margin-top: 12px;
+   }
+   .navbar-brand p img {  /*bangtan logo*/
+      height: 30px;
+   }
+   
+   /* the font icon and the word menu and the text over here to really be the same font size. */
+   #collapsable-nav a {  /*collapsed nav menu glyph*/
+    font-size: 1.2em;
+   }
+   
+    #collapsable-nav a span {
+        font-size: 1em;
+        margin-right: 5px;
+    }
+   
+    #call-btn > a {
+        font-size: 1.5em;
+        display: block;
+        margin: 0 20px;
+        padding: 10px;
+        border: 2px solid #fff;
+        background-color: #f6b319;
+        color: #951c49;
+    }
+    #xs-deliver {
+        margin-top: 5px;
+        font-size: .7em;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+    }
+    /* End Header */
+
+
+    /* Footer */
+    .panel-footer section {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .panel-footer section:nth-child(3) {
+        margin-bottom: 0; /*margin already exists on the whole row*/
+    }
+    .panel-footer section hr {
+        width: 50%;
+    }
+    /* End Footer */
+    
+    .container .jumbotron {
+        margin-top: 30px;
+        padding: 0;
+    }
+
+    #menu-tile, #specials-tile {
+        width: 365px;
+        margin: 0 auto 15px;
+    }
+     
+    /* single menu page */
+    .menu-item-photo {
+        margin-right: auto;
+    }
+
+    .menu-item-description {
+        text-align: center;
+    }
+
+    h3.menu-item-title  {
+        margin-top : 25px;
+    }
+}
+
+/* for super extra small device */
+@media (max-width: 479px) {
+    /* Header */
+    .navbar-brand h1 {  /*resturant name*/
+        padding-top: 5px;
+        font-size: 4.5vw;
+    }
+    /* home page  */
+    #menu-tile, #specials-tile {
+        width: 285px;
+        margin: 0 auto 15px;
+    }
+
+    .col-xxs-12 {
+      position: relative;
+      min-height: 1px;
+      padding-right: 15px;
+      padding-left: 15px;
+      float: left;
+      width: 100%;
+    }
+}
